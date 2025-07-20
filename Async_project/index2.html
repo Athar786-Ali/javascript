@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+</head>
+<body>
+    <h1>Chai aur javaScript</h1>
+    <button id="start">Start</button>
+    <br>
+    <button id="stop">Stop</button>
+
+</body>
+  <script>
+    // setInterval(function(){
+    //  console.log("Athar Ali" , Date.now());
+    // },2000 )
+    
+    const sayDate = function(){
+        console.log("Athar Ali" , Date.now()) 
+    }
+
+    let intervalId;
+    
+    document.querySelector('#start').addEventListener('click' , function(){
+           intervalId = setInterval(sayDate , 1000)
+    })
+   
+    document.querySelector('#stop').addEventListener('click' , function(){
+        clearInterval(intervalId);
+        intervalId = null;
+    })
+
+
+
+  </script>
+</html>
